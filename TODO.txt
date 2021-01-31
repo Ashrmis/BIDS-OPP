@@ -1,0 +1,21 @@
+A study has subjects.
+Subjects have sessions
+sessions have MRI data {anat,func,fmap,dwi}
+MRI data folders have data.
+
+
+Part 1: Create File structure
+- This will create a study with subjects with sub-folders
+
+So, input would be:
+			- The study directory name
+			- Subject ID OR List of subjects
+			- number of sessions
+				- if single subject ID provided, then create it
+				- if list of subjects, then create it
+- checks:
+	- directory exists
+	- does that subject already exist?
+
+
+- how to make script work on Windows or Linux. This there a way to get the path working?
