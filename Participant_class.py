@@ -23,7 +23,7 @@ class Participant:
         
         self.subname='sub-' + group + ID
         
-    
+        return
     
     """
     Functions Needed:
@@ -34,9 +34,4 @@ class Participant:
     
     """
 
-sub1 = Participant('ms','001',1)
-print(sub1.subname)
 
-
-sub2 = Participant('ms','002',1)
-print(sub2.subname)
