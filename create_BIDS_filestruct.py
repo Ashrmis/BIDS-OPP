@@ -1,11 +1,28 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Jan 31 18:44:50 2021
+#!/usr/bin/python
 
-@author: Ashish
-"""
-import Participant_class
+from Participant_class import Participant
+import sys
+
+import getopt
 
 
-sub1 = Participant('ms','021',1)
+try:
+    opts, args = getopt.getopt(sys.argv[1:], 'g:i:s', ['group=', 'id=', 'sessions='])
+except getopt.GetoptError:
+    sys.exit(2)
+
+
+
+
+for opt, arg in opts:
+    if opt in ('-g', '--group'):
+        group=arg
+    elif opt in ('-i', '--id'):
+        id = arg
+    elif opt in ('-s', '--sessions'):
+        ses_cnt = arg
+
+
+sub1 = Participant(group,id,ses_cnt)
+
 print(sub1.subname)
