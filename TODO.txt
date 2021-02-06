@@ -18,4 +18,4 @@ So, input would be:
 	- does that subject already exist?
 
 
-- how to make script work on Windows or Linux. This there a way to get the path working?
+
