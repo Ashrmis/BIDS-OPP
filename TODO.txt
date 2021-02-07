@@ -1,4 +1,6 @@
-- Figure out what to pass into the Participant class. Just the addsession that has the 
-  full session with it's label, OR just a number, that indicates how many session  folders to create
+- Figure out how to set arguments as required and optional
+
+- have if statement that checks if atleast one of addsession or sessions was included.
+  If both are included then exit
 
 
