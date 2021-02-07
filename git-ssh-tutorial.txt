@@ -1,0 +1,51 @@
+# Generating a new SSH key
+1. ssh-keygen -t ed25519 -C "your_email@example.com"
+2. Copy the .pub to github 
+
+# might just have to do the below stuff
+3. eval `ssh-agent -s`
+4. ssh-add {key that was generated. Not the .pub one}
+
+--------------------------------------------------------
+
+
+# creating a new git repo
+git init
+touch README.md
+git add README.md
+git commit -m "Adding a file"
+# go to github and create an empty repo and get the sshkey from there
+git remote add origin {insert key here}
+git remote -v
+git push origin master
+
+git fetch origin master <-- checks to see if there are any new changes on the github/remote repository
+git pull origin master  <-- pulls from github/remote repository
+
+# Branches
+git branch <-- see any new branches
+git checkout -b {name of new branch} <- this will also automatically switch you to the new branch
+
+git checkout {name of branch} <-- change between branches
+
+#once you have made your edits on the branches
+git add
+git commit -m
+
+git diff {branch1} {branch2} <-- shows the difference between branches
+
+git push origin {branch-name}
+
+# then on Github you can see the changes and create a pull request,
+# once they are merged on Github, you can do:
+	git checkout master
+	git pull origin master
+	
+# Undoing in Github
+# unstage fomr a commit
+git reset
+git reset {name of file to unstage from a commit}
+
+git reset HEAD~1 <-- unstages changes from 1 commit ago, not the one that was just comitted
+
+git restore {name of file} to discard changes made to a file

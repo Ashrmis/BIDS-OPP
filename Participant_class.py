@@ -12,6 +12,7 @@ class Participant:
         self.ID=ID
         self.session=session
         self.parent=parent
+        self.addsession=addsession
         self.subname='sub-' + group + ID
         
         return
